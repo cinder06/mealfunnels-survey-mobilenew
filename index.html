@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/styles.css">
+    <style>
+      @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  
+    #bootstrapForm {
+    background-image: linear-gradient(to right, #9306e4, #f6d365);
+    background-size: 100% auto;
+    animation: gradientAnimation 5s linear infinite;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px; /* Add padding to make it look nicer on smaller screens */
+}
+
+@media (max-width: 768px) {
+    #bootstrapForm {
+        max-width: 100%; /* Allow the form to take full width on smaller screens */
+        box-sizing: border-box; /* To ensure padding doesn't add extra width */
+    }
+}
+
+  
+  /* Limited Time Offer section */
+  #limited-offer {
+    background: linear-gradient(to right, #9306e4, #f6d365);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-shadow: #000000;
+    animation: blink 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  
+  body {
+    font-family: "regola";
+    font-weight: 400;
+    color: white;
+  }
+  @keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: .5;}
+    100% {opacity: 1;}
+  }
+  
+  
+  .submit-button {
+    display: none;
+ 
+
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen rounded-xl flex items-center justify-center";>
+      <div class="container mx-auto px-4">
+          <h1 class="text-5xl text-white font-bold mb-8"></h1>
+          <form action="https://docs.google.com/forms/d/e/1FAIpQLSdcxQZwGVKKVWcvTN__IOBF5syvuGfy5-nvmF8WwVOd0NHQig/formResponse"
+                  target="_self"
+                  id="bootstrapForm"
+                  method="POST"
+                  class="bg-white rounded-xl p-8 mb-4 transition-all ease-in-out duration-500"
+                  style="box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5); width: 60%; margin: auto;">
+                  <!-- Your form fields go here -->
+
+          <!-- Form Section 1 -->
+          <fieldset class="form-section" id="section-1">
+            <legend class="text-lg font-semibold mb-2 text-white-700" for="1241914454">Email Address</legend>
+            <div class="form-group">
+              <input id="621597622" type="Email" name="entry.621597622"
+                class="border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-700" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="validateInputSection('section-1', 'section-2', '621597622')">Next</button>
+          </fieldset>
+  
+          <!-- Form Section 2 -->
+          <fieldset class="form-section" id="section-2">
+            <legend class="text-lg font-semibold mb-2 text-white-700" for="208462405">Enter Your Name:</legend>
+            <div class="form-group">
+              <input id="1704870588" type="text" name="entry.1704870588"
+                class="border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-700" required>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="goToPreviousSection()">Back</button>
+            <button type="button" class="btn btn-primary" onclick="validateInputSection('section-2', 'section-3', '1704870588')">Next</button>
+          </fieldset>
+  
+          <!-- Form Section 3 -->
+          <fieldset class="form-section" id="section-3">
+            <legend class="text-lg font-semibold mb-2 text-white-700" for="1165107487">Enter Your Age:</legend>
+            <div class="form-group">
+              <input id="880842848" type="text" name="entry.880842848" class="border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-700" required>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-3')">Back</button>
+            <button type="button" class="btn btn-primary" onclick="validateInputSection('section-3', 'section-4', '880842848')">Next</button>
+          </fieldset>
+  
+          <!-- Form Section 4 -->
+          <fieldset class="form-section" id="section-4">
+            <legend class="text-lg font-semibold mb-2 text-black-700" for="961108092">Enter your height:</legend>
+            <div class="form-group">
+              <input id="980444896" type="text" name="entry.980444896" class="border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-700" required>
+            </div>
+            <div class="form-group">
+              <label class="flex items-center">
+                <input type="radio" name="entry.1327725715" value="cm" required>
+                <span class="ml-2">cm</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="entry.1327725715" value="ft" required>
+                <span class="ml-2">ft</span>
+              </label>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-4')">Back</button>
+            <button type="button" class="btn btn-primary" onclick="validateMultipleInputSection('section-4', 'section-5', '980444896', 'entry.1327725715')">Next</button>
+          </fieldset>
+  
+  
+          <!-- Form Section 5 -->
+          <fieldset class="form-section" id="section-5">
+            <legend class="text-lg font-semibold mb-2 text-white-700" for="1988081262">Enter your weight</legend>
+            <div class="form-group">
+              <input id="637763509" type="text" name="entry.637763509" class="border border-white-300 rounded-lg w-full py-2 px-3 text-gray-700" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="flex items-center">
+                <input type="radio" name="entry.137719222" value="lbs" required>
+                <span class="ml-2">lbs</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="entry.137719222" value="kg" required>
+                <span class="ml-2">kg</span>
+              </label>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-5')">Back</button>
+            <button type="button" class="btn btn-primary" onclick="validateMultipleInputSection('section-5', 'section-6', '637763509', 'entry.137719222')">Next</button>
+          </fieldset>
+  
+          
+          <!-- Form Section 6-->
+          <fieldset class="form-section" id="section-6">
+            <legend class="text-lg font-semibold mb-2 text-white-700" for="1963117056">What are your personal health and nutrition goals ?</legend>
+            <div class="form-group">
+              <div class="checkbox mb-2">
+                <label class="flex items-center">
+                  <input type="checkbox" name="entry.127313612" value="Lose weight" >
+                  <span class="ml-2">Lose weight</span>
+                </label>
+              </div>
+              <div class="checkbox mb-2">
+                <label class="flex items-center">
+                  <input type="checkbox" name="entry.127313612" value="Build muscle" >
+                  <span class="ml-2">Build muscle</span>
+                </label>
+              </div>
+              <div class="checkbox mb-2">
+                <label class="flex items-center">
+                  <input type="checkbox" name="entry.127313612" value="Improve overall health and wellness" >
+                  <span class="ml-2">Improve overall health and wellness</span>
+                </label>
+              </div>
+              <div class="checkbox mb-2">
+                <label class="flex items-center">
+                  <input type="checkbox" name="entry.127313612" value="Maintain current weight" >
+                  <span class="ml-2">Maintain current weight</span>
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="flex items-center">
+                  <input type="checkbox" name="entry.127313612" value="Other" >
+                  <span class="ml-2">Other</span>
+                </label>
+              </div>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-6')">Back</button>
+            <button type="button" class="btn btn-primary" onclick="validateCheckboxSection('section-6', 'section-7', 'entry.127313612')">Next</button>
+          </fieldset>
+  
+  
+          <!-- Form Section 7-->
+          <fieldset class="form-section" id="section-7">
+            <legend class="text-lg font-semibold mb-2 text-white-700" for="780621364">What is your daily calorie intake goal ?</legend>
+            <div class="form-group">
+              <div class="radio mb-2">
+                <label class="flex items-center">
+                  <input type="radio" name="entry.1443894547" value="1000-1200 calories" required>
+                  <span class="ml-2">1000-1200 calories</span>
+                </label>
+              </div>
+              <div class="radio mb-2">
+                <label class="flex items-center">
+                  <input type="radio" name="entry.1443894547" value="1200-1500 calories" required>
+                  <span class="ml-2">1200-1500 calories</span>
+                </label>
+              </div>
+              <div class="radio mb-2">
+                <label class="flex items-center">
+                  <input type="radio" name="entry.1443894547" value="1500-1800 calories" required>
+                  <span class="ml-2">1500-1800 calories</span>
+                </label>
+              </div>
+              <div class="radio mb-2">
+                <label class="flex items-center">
+                  <input type="radio" name="entry.1443894547" value="1800-2000 calories" required>
+                  <span class="ml-2">1800-2000 calories</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label class="flex items-center">
+                  <input type="radio" name="entry.1443894547" value="More than 2000 calories" required>
+                  <span class="ml-2">More than 2000 calories</span>
+                </label>
+              </div>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-7')">Back</button>
+            <button type="button" class="btn btn-primary" onclick="goToNextSection('section-7', 'section-8', 'entry.1443894547')">Next</button>
+          </fieldset>
+  
+  
+          <!-- Form Section 8-->
+          <fieldset class="form-section" id="section-8">
+            <legend class="text-lg font-semibold mb-2 text-white-700" for="648105299">How many meals do you eat per day on average ?</legend>
+            <div class="form-group">
+              <div class="radio mb-2">
+                <label class="flex items-center">
+                  <input type="radio" name="entry.1370621833" value="3" required>
+                  <span class="ml-2">3</span>
+                </label>
+              </div>
+              <div class="radio mb-2">
+                <label class="flex items-center">
+                  <input type="radio" name="entry.1370621833" value="4" required>
+                  <span class="ml-2">4</span>
+                </label>
+              </div>
+              <div class="radio mb-2">
+                <label class="flex items-center">
+                  <input type="radio" name="entry.1370621833" value="5" required>
+                  <span class="ml-2">5</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label class="flex items-center">
+                  <input type="radio" name="entry.1370621833" value="6 or more" required>
+                  <span class="ml-2">6 or more</span>
+                </label>
+              </div>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-8')">Back</button>
+            <button type="button" class="btn btn-primary" onclick="goToNextSection('section-8', 'section-9', 'entry.1370621833')">Next</button>
+          </fieldset>
+  
+          <!-- Form Section 9-->
+          <fieldset class="form-section" id="section-9">
+            <legend class="text-lg font-semibold mb-2 text-white-700"for="1223175999">Are there any dietary restrictions or allergies you need to account for ?</legend>
+            <div class="form-group">
+              <div class="checkbox mb-2">
+                <label class="flex items-center">
+                  <input type="checkbox" name="entry.1449508704" value="Gluten-free" >
+                  <span class="ml-2">Gluten-free
+                  </span>
+              </label>
+            </div>
+            <div class="checkbox mb-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.1449508704" value="Lactose-intolerant" >
+                <span class="ml-2">Lactose-intolerant</span>
+              </label>
+            </div>
+            <div class="checkbox mb-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.1449508704" value="Vegan">
+                <span class="ml-2">Vegan</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.1449508704" value="None">
+                <span class="ml-2">None</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.1449508704" value="Other :" >
+                <span class="ml-2">Other :</span>
+              </label>
+            </div>
+          </div>
+          <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-9')">Back</button>
+          <button type="button" class="btn btn-primary" onclick="validateCheckboxSection('section-9', 'section-10', 'entry.1449508704')">Next</button>
+        </fieldset>
+  
+        <!-- Form Section 10-->
+        <fieldset class="form-section" id="section-10">
+          <legend class="text-lg font-semibold mb-2 text-white-700" for="1822908706">What types of food do you enjoy eating   and find satisfying</legend>
+          <div class="form-group">
+            <div class="checkbox mb-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.734177320" value="Meat and poultry" >
+                <span class="ml-2">Meat and poultry</span>
+              </label>
+            </div>
+            <div class="checkbox mb-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.734177320" value="Seafood">
+                <span class="ml-2">Seafood</span>
+              </label>
+            </div>
+            <div class="checkbox mb-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.734177320" value="Vegetables" >
+                <span class="ml-2">Vegetables</span>
+              </label>
+            </div>
+            <div class="checkbox mb-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.734177320" value="Fruits" >
+                <span class="ml-2">Fruits</span>
+              </label>
+            </div>
+            <div class="checkbox mb-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.734177320" value="Grains and starches" >
+                <span class="ml-2">Grains and starches</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.734177320" value="__other_option__" >
+                <input type="text" name="entry.734177320.other_option_response" placeholder="other_option_response" class="border rounded w-full py-2 px-3 ml-2">
+              </label>
+            </div>
+             <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-10')">Back</button>
+             <button type="button" class="btn btn-primary" onclick="validateCheckboxSection('section-10', 'section-11', 'entry.734177320')">Next</button>
+            </div>
+        </fieldset>
+  
+        <!-- Form Section 11-->
+        <fieldset class="form-section" id="section-11">
+            <legend class="text-lg font-semibold mb-2 text-white-700" for="532717463">Do you have a preferred macronutrient breakdown ?</legend>
+            <div class="form-group">
+              <div class="checkbox mb-2">
+                <label class="flex items-center">
+                  <input type="checkbox" name="entry.734310642" value="High protein" >
+                  <span class="ml-2">High protein</span>
+                </label>
+              </div>
+              <div class="checkbox mb-2">
+                <label class="flex items-center">
+                  <input type="checkbox" name="entry.734310642" value="High fiber" >
+                  <span class="ml-2">High fiber</span>
+                </label>
+              </div>
+              <div class="checkbox mb-2">
+                <label class="flex items-center">
+                  <input type="checkbox" name="entry.734310642" value="Low-carb" >
+                  <span class="ml-2">Low-carb</span>
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="flex items-center">
+                  <input type="checkbox" name="entry.734310642" value="No preference" >
+                  <span class="ml-2">No preference</span>
+                </label>
+              </div>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-11')">Back</button>
+            <button type="button" class="btn btn-primary" onclick="validateCheckboxSection('section-11', 'section-12', 'entry.734310642')">Next</button>
+          </fieldset>
+  
+  
+       <!-- Form Section 12-->
+  <fieldset class="form-section" id="section-12">
+      <legend class="text-lg font-semibold mb-2 text-white-700" for="1408523643">Would you prefer to incorporate snacks into your meal plan?</legend>
+      <div class="form-group">
+          <div class="radio mb-2">
+              <label class="flex items-center">
+                  <input type="radio" name="entry.738137780" value="Yes" required>
+                  <span class="ml-2">Yes</span>
+              </label>
+          </div>
+          <div class="radio">
+              <label class="flex items-center">
+                  <input type="radio" name="entry.738137780" value="No" required>
+                  <span class="ml-2">No</span>
+              </label>
+          </div>
+          <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-12')">Back</button>
+          <button type="button" class="btn btn-primary" onclick="goToNextSection('section-12', 'section-13', 'entry.738137780')">Next</button>
+        </div>
+  </fieldset>
+  
+   <!-- Form Section 11-->
+   <fieldset class="form-section" id="section-11">
+    <legend class="text-lg font-semibold mb-2 text-white-700" for="532717463">Do you have a preferred macronutrient breakdown ?</legend>
+    <div class="form-group">
+      <div class="checkbox mb-2">
+        <label class="flex items-center">
+          <input type="checkbox" name="entry.734310642" value="High protein" >
+          <span class="ml-2">High protein</span>
+        </label>
+      </div>
+      <div class="checkbox mb-2">
+        <label class="flex items-center">
+          <input type="checkbox" name="entry.734310642" value="High fiber" >
+          <span class="ml-2">High fiber</span>
+        </label>
+      </div>
+      <div class="checkbox mb-2">
+        <label class="flex items-center">
+          <input type="checkbox" name="entry.734310642" value="Low-carb" >
+          <span class="ml-2">Low-carb</span>
+        </label>
+      </div>
+      <div class="checkbox">
+        <label class="flex items-center">
+          <input type="checkbox" name="entry.734310642" value="No preference" >
+          <span class="ml-2">No preference</span>
+        </label>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary" onclick="goToPreviousSection('section-11')">Back</button>
+    <button type="button" class="btn btn-primary" onclick="validateCheckboxSection('section-11', 'section-12', 'entry.734310642')">Next</button>
+  </fieldset>
+  
+  
+  <!-- Form Section 12-->
+  <fieldset class="form-section" id="section-12">
+    <legend class="text-lg font-semibold mb-2 text-white-700" for="1408523643">Would you prefer to incorporate snacks into your meal plan?</legend>
+    <div class="form-group">
+    <div class="radio mb-2">
+        <label class="flex items-center">
+            <input type="radio" name="entry.738137780" value="Yes" required>
+            <span class="ml-2">Yes</span>
+        </label>
+    </div>
+    <div class="radio">
+        <label class="flex items-center">
+            <input type="radio" name="entry.738137780" value="No" required>
+            <span class="ml-2">No</span>
+        </label>
+    </div>
+    <button type="button" class="btn btn-secondary" onclick="goToPreviousSection()">Back</button>
+    <button type="button" class="btn btn-primary" onclick="goToNextSection('section-12', 'section-13', 'entry.738137780')">Next</button>
+    </div>
+    </fieldset>
+    
+    <!-- Limited offer -->
+  <div id="limited-offer" style="display: none;">
+    <legend class="text-base font-bold mb-8" style="color: rgb(0, 0, 0);">LIMITED TIME OFFER!</legend>
+    <fieldset>
+      <legend for="1684762206" style="color: rgb(0, 0, 0);"></legend>
+      <div class="form-group mb-4">
+        <p class="help-block mb-4" style="color: rgb(0, 0, 0);">50% Off Limited Time Offer !
+      </div>
+    </fieldset>
+  </div>
+  
+    <!-- Form Section 13-->
+    <fieldset class="form-section" id="section-13">
+    <legend for="1996759733"></legend>
+    <div class="form-group mb-4">
+      <p class="help-block2 mb-2"> Get Your Personalised  Mealfunnels Meal Plan Now ! :</p>
+      <div class="radio">
+          <label>
+              <input type="radio" name="entry.366819695" value="US$19.99" required>
+              US$19.99
+          </label>
+      </div>
+    </div>
+    <input type="hidden" name="fvv" value="1">
+  <input type="hidden" name="fbzx" value="3831311249005741701">
+  <!--
+      CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+      This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+      Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+      We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+  -->
+  <input type="hidden" name="pageHistory" value="0,1,2,3,4,5,6,7,8,9,10,11,12">
+
+  <button type="submit" class="btn btn-primary" onclick="return validateRadioSection('section-13', 'entry.366819695')">Submit</button>    </fieldset>
+    
+    </form>
+    
+  
+    <style>
+      .btn {
+        transition: all 0.3s ease;
+        padding: 10px 30px;
+        border-radius: 25px;
+        cursor: pointer;
+      }
+  
+      .btn:hover {
+        background: linear-gradient(to left, #9306e4, #f6d365);
+        border-radius: 25px;
+        padding: 15px 30px;
+        cursor: pointer;
+      }
+  
+      .btn-primary {
+        color: white;
+        padding: 10px 30px;
+        border-radius: 25px;
+        background-color: #007bff;
+        border-color: #007bff;
+        margin-top: 30px;
+      }
+  
+      .btn-secondary {
+        color: white;
+        padding: 10px 30px;
+        border-radius: 25px;
+        background-color: #6c757d;
+        border-color: #6c757d;
+      }
+  
+      .submit-button {
+        color: white;
+        padding: 10px 30px;
+        border-radius: 25px;
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+  
+      .form-section {
+        display: none;
+      }
+    </style>
+    <script>
+      function showNextSection(currentSectionId, nextSectionId) {
+      // hide current section
+      document.getElementById(currentSectionId).style.display = 'none';
+      
+      // show next section
+      document.getElementById(nextSectionId).style.display = 'block';
+  }
+  
+      function goToNextSection(currentSectionId, nextSectionId, inputName) {
+          let sectionElement = document.getElementById(currentSectionId);
+          let inputs = sectionElement.querySelectorAll('input[name="' + inputName + '"]');
+          let checked = false;
+          
+          inputs.forEach(input => {
+              if (input.checked) {
+                  checked = true;
+              }
+          });
+          
+          if (checked) {
+              showSection(nextSectionId);
+          } else {
+              alert('Please choose an option before proceeding.');
+          }
+      }
+      
+      function showSection(sectionId) {
+          // You need to implement this function to hide the current section and show the next one.
+          // It's not possible to provide a complete implementation without seeing the rest of your code.
+      }
+      </script>
+      
+    <script>
+  function validateCheckboxSection(sectionId, nextSectionId, checkboxName) {
+    var checkboxes = document.getElementsByName(checkboxName);
+    var checkboxChecked = false;
+  
+    // Check if a checkbox is selected
+    for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+        checkboxChecked = true;
+        break;
+      }
+    }
+  
+    if (!checkboxChecked) {
+      alert("Please select at least one option.");
+    } else {
+      showSection(nextSectionId);
+    }
+  }
+  </script>
+  <script>
+  function validateRadioSection(sectionId, inputName) {
+    let sectionElement = document.getElementById(sectionId);
+    let inputs = sectionElement.querySelectorAll('input[name="' + inputName + '"]');
+    let checked = false;
+    
+    inputs.forEach(input => {
+        if (input.checked) {
+            checked = true;
+        }
+    });
+    
+    if (!checked) {
+        alert('Please choose an option before proceeding.');
+    }
+    
+    return checked; // Return false if no option is selected (which cancels form submission), true otherwise
+  }
+  </script>
+  
+  <script>
+    function validateMultipleInputSection(sectionId, nextSectionId, inputId, radioName) {
+      var inputValue = document.getElementById(inputId).value;
+      var radios = document.getElementsByName(radioName);
+      var radioChecked = false;
+  
+      // Check if a radio button is selected
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          radioChecked = true;
+          break;
+        }
+      }
+  
+      if (!inputValue || !radioChecked) {
+        alert("Please enter the required information.");
+      } else {
+        showSection(nextSectionId);
+      }
+    }
+  </script>
+  
+  
+     <script>
+ function validateInputSection(sectionId, nextSectionId, inputId) {
+    var inputValue = document.getElementById(inputId).value;
+
+    // Regular expression for email validation
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    // Regular expression for name validation
+    var nameRegex = /^[a-zA-Z]{2,}$/;
+    
+    if (!inputValue) {
+        alert("Please enter the required information.");
+    } else if (inputId === '621597622' && !emailRegex.test(inputValue)) { // additional check for email validation
+        alert("Please enter a valid email address.");
+    } else if (inputId === '880842848' && (inputValue < 18 || inputValue > 120)) { // replace 'yourAgeInputId' with the actual id of your age input field
+        alert("Please enter a valid age between 18 and 120");
+    } else if (inputId === '1704870588' && !nameRegex.test(inputValue)) { // replace 'yourNameInputId' with the actual id of your name input field
+        alert("Please enter a valid name (letters only, at least two characters).");
+    } else if (inputId === '980444896' && (inputValue < 50 || inputValue > 1000)) { // replace 'yourHeightInputId' with the actual id of your height input field
+        alert("Please enter a valid height .");
+    } else if (inputId === '637763509' && (inputValue < 20 || inputValue > 1000)) { // replace 'yourWeightInputId' with the actual id of your weight input field
+        alert("Please enter a valid weight ");
+        
+    } else {
+        showSection(nextSectionId);
+    }
+}
+
+      window.onload = function () {
+        document.querySelector('.form-section').style.display = 'block';
+      };
+  
+      function showSection(id) {
+      document.querySelectorAll('.form-section').forEach(function (section) {
+          section.style.display = 'none';
+      });
+  
+      document.getElementById(id).style.display = 'block';
+  
+      if (id === 'section-13') {
+          document.getElementById('limited-offer').style.display = 'block';
+          document.getElementById('submit-button').style.display = 'block';
+      } else {
+          document.getElementById('limited-offer').style.display = 'none';
+          document.getElementById('submit-button').style.display = 'none';
+      }
+  
+      }
+  
+      function goToPreviousSection() {
+        var currentSection = Array.from(document.querySelectorAll('.form-section')).find(section => section.style.display === 'block');
+        if (currentSection && currentSection.previousElementSibling) {
+          currentSection.style.display = 'none';
+          currentSection.previousElementSibling.style.display = 'block';
+          document.getElementById('submit-button').style.display = 'none';
+        }
+      }
+      function showSubmitButton() {
+      document.getElementById('submit-button').style.display = 'block';
+  }
+  
+    </script>
+         <script>
+        $(document).ready(function() {
+          $('#bootstrapForm').submit(function (event) {
+              event.preventDefault()
+              var extraData = {}
+              $('#bootstrapForm').ajaxSubmit({
+                  data: extraData,
+                  dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+                  error: function () {
+                      // Submit of form should be successful but JSONP callback will fail because Google Forms
+                      // does not support it, so this is handled as a failure.
+                      // alert('Form Submitted. Thanks.')
+                      // Redirect the user to a custom Stripe page:
+                      window.location = 'https://buy.stripe.com/test_fZe2ad7HP0pc3oA146'
+                  }
+              })
+          });
+        });
+        </script>
+  </body>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+    integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+  
+  </html>
+  
+  
+  
+        
+          
